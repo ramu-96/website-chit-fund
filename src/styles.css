@@ -1,1 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;  /* full screen height */
+  width: 100%;
+  background-color: var(--bg);
+
+   
+}
+:root {
+  --primary: #16A34A;
+  --secondary: #4ADE80;
+  --hover: #15803D;
+  --bg: #F0FDF4;
+  --text: #1F2937;
+}
+body {
+  font-family: 'Inter', sans-serif;
+}

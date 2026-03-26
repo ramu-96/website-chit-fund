@@ -1,0 +1,28 @@
+<div class="sidebar" [class.collapsed]="collapsed">
+
+  <img src="assets/chit-fund.png" class="img" width="300px" />
+
+  <ul>
+    <li>
+      <a routerLink="/dashboard" routerLinkActive="active-link">
+        <lucide-icon [img]="LayoutDashboard" class="icon"></lucide-icon>
+        <span *ngIf="!collapsed">Dashboard</span>
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/members" routerLinkActive="active-link">
+        <lucide-icon [img]="Users" class="icon"></lucide-icon>
+        <span *ngIf="!collapsed">Members</span>
+      </a>
+    </li>
+
+    <li>
+      <a routerLink="/payments" routerLinkActive="active-link">
+        <lucide-icon [img]="IndianRupee" class="icon"></lucide-icon>
+        <span *ngIf="!collapsed">Payments</span>
+      </a>
+    </li>
+  </ul>
+
+</div>

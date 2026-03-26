@@ -1,0 +1,80 @@
+/* sidebar.component.css */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  color: white;
+}
+h2,
+li,
+a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+p {
+  color: var(--primary);
+}
+.sidebar ul {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  list-style: none; /* ❌ removes dots */
+  padding: 1rem;
+}
+
+.sidebar ul li a {
+  text-decoration: none; /* ❌ removes underline */
+  color: inherit; /* keeps your text color clean */
+}
+/* Hover */
+.sidebar ul li a:hover {
+  background: var(--hover);
+}
+
+/* ✅ Active route (THIS is what you need) */
+.sidebar ul li a.active-link {
+  background: var(--secondary);
+  font-weight: 600;
+  color: black;
+  font-weight: bold;
+  border-left: 4px solid green;
+}
+.sidebar a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* center icons when collapsed */
+.sidebar.collapsed ul li a {
+  justify-content: center;
+}
+
+@media (max-width: 1285px) {
+  .img {
+    width: 150px;
+  }
+}
+@media (max-width: 800px) {
+  .img {
+    width: 120px;
+  }
+}
+.img {
+  max-width: 200px;
+  margin: 16px auto;
+  display: block;
+}
+.sidebar.collapsed img {
+  width: 150px;
+}
+.sidebar ul {
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}

@@ -1,0 +1,49 @@
+<main class="main">
+ <div class="grid">
+<div class="empty">
+    <h2>Grow Your Savings with Confidence</h2>
+    <p>Digitally manage chit funds, track payments, and ensure transparency — all in one place.</p>
+    <ul class="feature-list">
+  <li>
+    <lucide-icon [img]="ShieldCheck" class="icon"></lucide-icon>
+    <div>
+      <h3>Secure and Compliant</h3>
+      <p>PCI compliant, encrypted — your payments and records are protected.</p>
+    </div>
+  </li>
+
+  <li>
+    <lucide-icon [img]="Users" class="icon"></lucide-icon>
+    <div>
+      <h3>Community Driven</h3>
+      <p>Peer-backed chit groups with built-in member management and KYC flows.</p>
+    </div>
+  </li>
+
+  <li>
+    <lucide-icon [img]="Eye" class="icon"></lucide-icon>
+    <div>
+      <h3>Transparent</h3>
+      <p>Clear audit trails and reporting for every collection and auction.</p>
+    </div>
+  </li>
+</ul>
+</div>
+<form class="form">
+    <div class="header">
+       <img src="../../assets/money-tree.jpg" alt="money" class="img">
+    <h2>Welcome Back </h2>
+    </div>
+        <p>See what is going on with your business</p>
+        <label for="email">Email</label>
+    <input type="email" class="input" placeholder="Email Address" [formControl]="mail">
+    <div class="error">{{mail.errors?.['required'] ? 'Email is required' : ''}}</div>
+    <label for="password">Password</label>
+    <input type="password" class="input" placeholder="Password" [formControl]="password">
+    <div class="error">{{password.errors?.['required'] ? 'Password is required' : ''}}</div>
+    <button type="submit" class="button" (click)="login()">Login</button>
+    <p>Not Registered Yet? <a href="#" class="span">Create an Account</a></p>
+ 
+</form>
+</div>
+</main>
