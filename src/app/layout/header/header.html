@@ -1,7 +1,16 @@
 <header class="header">
-<button (click)="onToggle()" class="toggle">☰</button>
-  <h3>Welcome back 👋</h3>
+<!-- <button (click)="onToggle()" class="toggle">☰</button> -->
+<app-button
+  label="☰"
+  type="primary"
+  (clicked)="onToggle()"
+></app-button>
+  <h3>Welcome back, Ramu 👋</h3>
   <div class="right">
-    <span>Logout</span>
+    <app-button
+  label="Logout"
+  type="primary"
+  (clicked)="onLogout()"
+></app-button>
   </div>
 </header>
