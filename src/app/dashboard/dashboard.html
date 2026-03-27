@@ -9,10 +9,10 @@
       <h3>👥 Members</h3>
 
       <div class="stats">
-        <div>Total: {{ totalMembers }}</div>
-        <div>Unpaid: {{ unpaidMembers }}</div>
-        <div>Best Users: {{ bestUsers }}</div>
-        <div>Draft: {{ draftMembers }}</div>
+        <div class="green"><span>{{ totalMembers }}</span> - Total Members</div>
+        <div class="red"><span>{{ unpaidMembers }}</span> - Unpaid Members</div>
+        <div class="blue"><span>{{ bestUsers }}</span> - Best Users</div>
+        <div class="yellow"><span>{{ draftMembers }}</span> - Draft Members</div>
       </div>
     </div>
 
@@ -21,10 +21,10 @@
       <h3>💰 Chit Groups</h3>
 
       <div class="stats">
-        <div>Total: {{ totalChits }}</div>
-        <div>Pending: {{ pendingChits }}</div>
-        <div>Draft: {{ draftChits }}</div>
-        <div>Finished: {{ finishedChits }}</div>
+        <div class="green"><span>{{ totalChits }}</span> - Total Chits</div>
+        <div class="red"><span>{{ pendingChits }}</span> - Pending Chits</div>
+        <div class="yellow"><span>{{ draftChits }}</span> - Draft Chits</div>
+        <div class="blue"><span>{{ finishedChits }}</span> - Finished Chits</div>
       </div>
     </div>
 
@@ -34,6 +34,7 @@
   <!-- Left Chart -->
   <div class="chart-box">
     <h3>💸 Payment Overview</h3>
+    <h4>80% payments completed this month</h4>
     <canvas id="paymentChart"></canvas>
   </div>
 

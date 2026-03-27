@@ -26,8 +26,8 @@
 }
 
 .stats div {
-  background: #f1f8f4;
-  padding: 15px;
+  /* background: #f1f8f4; */
+  padding: 1rem;
   border-radius: 8px;
   font-weight: 500;
 }
@@ -65,4 +65,23 @@
 #groupChart{
   width: 100% !important;
   height: 250px !important;
+}
+.stats span{
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.blue{
+  background-color: var(--done);
+}
+.red{
+  background-color: var(--alert);
+}
+.green{
+  background-color: var(--secondary);
+}
+.yellow{
+  background-color: var(--draft);
+}
+.chart-box h4{
+  color: var(--primary);
 }
