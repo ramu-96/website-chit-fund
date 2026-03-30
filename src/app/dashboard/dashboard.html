@@ -6,7 +6,7 @@
 
     <!-- Members Card -->
     <div class="card">
-      <h3>👥 Members</h3>
+      <p>👥 Members</p>
 
       <div class="stats">
         <div class="green"><span>{{ totalMembers }}</span> - Total Members</div>
@@ -18,7 +18,7 @@
 
     <!-- Chit Groups Card -->
     <div class="card">
-      <h3>💰 Chit Groups</h3>
+      <p>💰 Chit Groups</p>
 
       <div class="stats">
         <div class="green"><span>{{ totalChits }}</span> - Total Chits</div>
@@ -33,14 +33,14 @@
 
   <!-- Left Chart -->
   <div class="chart-box">
-    <h3>💸 Payment Overview</h3>
+    <p>💸 Payment Overview</p>
     <h4>80% payments completed this month</h4>
     <canvas id="paymentChart"></canvas>
   </div>
 
   <!-- Right Chart -->
   <div class="chart-box">
-    <h3>📊 Group Analysis</h3>
+    <p>📊 Group Analysis</p>
 
     <select (change)="onGroupChange($event)">
       <option *ngFor="let g of chitGroups" [value]="g.id">

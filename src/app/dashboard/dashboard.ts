@@ -24,6 +24,7 @@ export class Dashboard {
   finishedChits = 5;
   totalIncome = 80000;
   pendingAmount = 20000;
+  rootStyles = getComputedStyle(document.documentElement);
   // Dropdown groups
   chitGroups = [
     { id: 1, name: 'Chit A' },
@@ -48,6 +49,7 @@ export class Dashboard {
      this.createGroupChart(1); // default group
   }
 
+
   createChart() {
     new Chart("paymentChart", {
       type: 'doughnut',
@@ -55,10 +57,13 @@ export class Dashboard {
         labels: ['Received', 'Pending'],
         datasets: [{
           data: [this.totalIncome, this.pendingAmount],
-          backgroundColor: ['#4caf50', '#f44336']
+          backgroundColor: [
+        this.rootStyles.getPropertyValue('--primary'),
+        this.rootStyles.getPropertyValue('--danger')
+      ]
         }]
       },
-      options: {
+      options: {  
         responsive: false
       }
     });
@@ -81,12 +86,12 @@ export class Dashboard {
           {
             label: 'Paid',
             data: data.paid,
-            backgroundColor: '#4caf50'
+            backgroundColor: this.rootStyles.getPropertyValue('--primary')
           },
           {
             label: 'Pending',
             data: data.pending,
-            backgroundColor: '#f44336'
+            backgroundColor: this.rootStyles.getPropertyValue('--danger')
           }
         ]
       },

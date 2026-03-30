@@ -1,0 +1,21 @@
+.search {
+  position: relative;
+  /* width: 250px; /* adjust as needed */
+}
+
+.search input {
+  /* width: 100%; */
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.7rem;
+}
+
+.search .icon {
+  position: absolute;
+  right: 2rem;   /* move inside right */
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none; /* click goes to input */
+  color: #888;
+}
