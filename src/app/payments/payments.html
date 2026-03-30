@@ -1,1 +1,83 @@
-<p>payments works!</p>
+<div class="payments">
+
+  <!-- 🔷 Header -->
+  <div class="header">
+    <h2>Payments Dashboard</h2>
+    <p>Track collections, payouts, and group-wise transactions</p>
+  </div>
+
+  <!-- 🔶 Group Summary -->
+  <div class="group-cards">
+    <div class="card" *ngFor="let g of groups">
+      <h3>{{ g.name }}</h3>
+      <p>Total: ₹{{ g.total }}</p>
+      <p>Collected: ₹{{ g.collected }}</p>
+      <p>Pending: ₹{{ g.pending }}</p>
+    </div>
+  </div>
+
+  <!-- 🔷 Payments Table -->
+  <div class="table-section">
+    <h3>Member Payments</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Group</th>
+          <th>Amount</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of payments">
+          <td>{{ p.name }}</td>
+          <td>{{ p.group }}</td>
+          <td>₹{{ p.amount }}</td>
+          <td>
+            <span class="status" [class.paid]="p.status === 'paid'">
+              {{ p.status }}
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 🔶 Payout Section -->
+  <div class="payout">
+    <h3>Send Payout</h3>
+
+    <div class="form">
+      <select>
+        <option>Select Group</option>
+        <option *ngFor="let g of groups">{{ g.name }}</option>
+      </select>
+
+      <select>
+        <option>Select Member</option>
+        <option *ngFor="let m of members">{{ m.name }}</option>
+      </select>
+
+      <input type="number" placeholder="Enter Amount" />
+
+      <button (click)="sendPayment()">Send Payment</button>
+    </div>
+  </div>
+
+  <!-- 🔷 Recent Transactions -->
+  <div class="transactions">
+    <h3>Recent Transactions</h3>
+
+    <div class="txn" *ngFor="let t of transactions">
+      <div>
+        <strong>{{ t.name }}</strong>
+        <p>{{ t.group }}</p>
+      </div>
+      <div>₹{{ t.amount }}</div>
+      <div class="success">Success</div>
+    </div>
+  </div>
+
+</div>

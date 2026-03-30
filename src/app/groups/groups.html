@@ -8,8 +8,8 @@
  <div class="header">
    <div class="header-content">
     <div class="block">
-  <h3 class="title">Users Management</h3>
-  <div class="batch"> 240 Users</div>
+  <h3 class="title">Group Management</h3>
+  <div class="batch"> 30 Groups</div>
   </div>
 
   <div class="block">
@@ -17,20 +17,22 @@
   <app-search></app-search>
   <app-filter></app-filter>
 
-    <app-button variant="primary" (click)="onAddUser()" label="Add User"></app-button>
+    <app-button variant="primary" (click)="onAddUser()" label="Add Group"></app-button>
     
   </div>
 
 </div>
-<p class="subtitle">Manage all members efficiently, track their details, and monitor their participation in chit funds.</p>
+<p class="subtitle">Manage all groups efficiently, track their details, and monitor their participation in chit funds.</p>
 </div>
   <div class="table-container">
     <table>
       <thead>
         <tr>
-          <th>Name</th>
+          <th>Group Name</th>      
+          <th>Leader Name</th>
           <th>Phone</th>
-          <th>Chit Group</th>
+          <th>Amount</th>
+          <th>Auction Date</th>
           <th>Status</th>
           <th>Actions</th>
         </tr>
@@ -38,8 +40,10 @@
       <tbody>
         <tr *ngFor="let m of members; let i = index">
           <td>{{ m.name }}</td>
+          <td>{{ m.leader }}</td>
           <td>{{ m.phone }}</td>
-          <td>{{ m.group }}</td>
+          <td>{{ m.amount }}</td>
+          <td>{{ m.auctionDate }}</td>
           <td>
             <span class="status" [class.paid]="m.status === 'paid'">
               {{ m.status }}
@@ -70,3 +74,4 @@
 </ul>
   </div>
 </div>
+

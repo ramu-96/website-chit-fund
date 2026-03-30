@@ -1,4 +1,55 @@
-<div class="card">
-  <p class="label">Total Members</p>
-  <h2 class="value">120</h2>
+<div class="dashboard">
+
+  <!-- <h2>Dashboard</h2> -->
+
+  <div class="cards">
+
+    <!-- Members Card -->
+    <div class="card">
+      <p>👥 Members</p>
+
+      <div class="stats">
+        <div class="green"><span>{{ totalMembers }}</span> - Total Members</div>
+        <div class="red"><span>{{ unpaidMembers }}</span> - Unpaid Members</div>
+        <div class="blue"><span>{{ bestUsers }}</span> - Best Users</div>
+        <div class="yellow"><span>{{ draftMembers }}</span> - Draft Members</div>
+      </div>
+    </div>
+
+    <!-- Chit Groups Card -->
+    <div class="card">
+      <p>💰 Chit Groups</p>
+
+      <div class="stats">
+        <div class="green"><span>{{ totalChits }}</span> - Total Chits</div>
+        <div class="red"><span>{{ pendingChits }}</span> - Pending Chits</div>
+        <div class="yellow"><span>{{ draftChits }}</span> - Draft Chits</div>
+        <div class="blue"><span>{{ finishedChits }}</span> - Finished Chits</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="chart-row">
+
+  <!-- Left Chart -->
+  <div class="chart-box">
+    <p>💸 Payment Overview</p>
+    <h4>80% payments completed this month</h4>
+    <canvas id="paymentChart"></canvas>
+  </div>
+
+  <!-- Right Chart -->
+  <div class="chart-box">
+    <p>📊 Group Analysis</p>
+
+    <select (change)="onGroupChange($event)">
+      <option *ngFor="let g of chitGroups" [value]="g.id">
+        {{ g.name }}
+      </option>
+    </select>
+
+    <canvas id="groupChart"></canvas>
+  </div>
+
+</div>
 </div>

@@ -1,0 +1,22 @@
+button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Variants */
+.primary {
+  background: var(--primary);
+  color: white;
+}
+
+.secondary {
+  background: var(--secondary);
+  color: black;
+}
+
+.danger {
+  background: #dc2626;
+  color: white;
+}

@@ -1,0 +1,79 @@
+.payments {
+  padding: 20px;
+}
+
+/* header */
+.header h2 {
+  margin: 0;
+}
+
+.header p {
+  color: gray;
+}
+
+/* cards */
+.group-cards {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.card {
+  flex: 1;
+  padding: 15px;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.status {
+  padding: 4px 8px;
+  border-radius: 4px;
+  background: #ffe5e5;
+}
+
+.status.paid {
+  background: #d4edda;
+}
+
+/* payout */
+.payout {
+  margin-top: 20px;
+}
+
+.form {
+  display: flex;
+  gap: 10px;
+}
+
+.form select,
+.form input {
+  padding: 8px;
+}
+
+/* transactions */
+.transactions {
+  margin-top: 20px;
+}
+
+.txn {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.success {
+  color: green;
+}

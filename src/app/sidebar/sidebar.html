@@ -1,6 +1,6 @@
 <div class="sidebar" [class.collapsed]="collapsed">
 
-  <img src="assets/chit-fund.png" class="img" width="300px" />
+  <img src="assets/chit-fund.png" class="img" width="250px" />
 
   <ul>
     <li>
@@ -10,13 +10,19 @@
       </a>
     </li>
 
+ 
     <li>
       <a routerLink="/members" routerLinkActive="active-link">
         <lucide-icon [img]="Users" class="icon"></lucide-icon>
         <span *ngIf="!collapsed">Members</span>
       </a>
     </li>
-
+   <li>
+      <a routerLink="/groups" routerLinkActive="active-link">
+        <lucide-icon [img]="Users" class="icon"></lucide-icon>
+        <span *ngIf="!collapsed">Groups</span>
+      </a>
+    </li>
     <li>
       <a routerLink="/payments" routerLinkActive="active-link">
         <lucide-icon [img]="IndianRupee" class="icon"></lucide-icon>
