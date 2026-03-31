@@ -17,9 +17,15 @@ import { HostListener } from '@angular/core';
 })
 export class Layout {
   isCollapsed = false;
+  isHide = false;
 
   toggleSidebar() {
-    this.isCollapsed = !this.isCollapsed;
+    if(window.innerWidth >= 1024){
+      this.isCollapsed = !this.isCollapsed;
+    }
+    else{
+      this.isHide = !this.isHide;
+    }
   }
   ngOnInit() {
   this.checkScreen();
