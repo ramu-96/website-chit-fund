@@ -17,7 +17,11 @@
   gap: 15px;
   margin: 20px 0;
 }
-
+@media (max-width: 768px) {
+  .group-cards {
+    flex-direction: column;
+  }
+}
 .card {
   flex: 1;
   padding: 15px;
