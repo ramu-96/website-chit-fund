@@ -2,9 +2,10 @@
 
   <!-- Sidebar -->
 
+<app-sidebar [collapsed]="isCollapsed" class="sidebar"></app-sidebar>
 
-  <app-sidebar [collapsed]="isCollapsed" class="sidebar"></app-sidebar>
-  
+<!-- OVERLAY -->
+<div class="overlay" *ngIf="isHide" (click)="closeDrawer()"></div>
 
   <!-- Header -->
   <app-header class="header" (toggleSidebar)="toggleSidebar()"></app-header>

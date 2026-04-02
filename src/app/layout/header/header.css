@@ -1,11 +1,12 @@
 .header {
+  width:100% ;
   background: var(--bg);
   color: var(--primary);
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #eee;
+
 }
 
 .right {
@@ -20,4 +21,8 @@
 }
 p{
   font-weight: bold;
+}
+.web-header{
+  display: flex;
+    border-bottom: 1px solid #eee;
 }

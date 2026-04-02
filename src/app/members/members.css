@@ -96,3 +96,7 @@ th,td{
 .pagination li button:hover:not(.active) {
   background-color: var(--secondary);
 }
+.table-container{
+  width: 100%;
+  overflow-x: auto;
+}

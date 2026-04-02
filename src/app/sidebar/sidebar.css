@@ -52,7 +52,7 @@ p {
 
 /* center icons when collapsed */
 .sidebar.collapsed ul li a {
-  justify-content: center;
+  /* justify-content: center; */
 }
 
 @media (max-width: 1285px) {
@@ -67,7 +67,7 @@ p {
 }
 @media (max-width: 1000px) {
   .img {
-    width: 110px;
+    width: 180px;
   }
 }
 .img {

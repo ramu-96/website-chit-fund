@@ -3,6 +3,7 @@ import { RouterModule } from '@angular/router';
 import { Sidebar } from '../sidebar/sidebar';
 import { Header } from './header/header'; // ✅ ADD THIS
 import { HostListener } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-layout',
@@ -10,6 +11,7 @@ import { HostListener } from '@angular/core';
   imports: [
     RouterModule,
     Sidebar,
+    CommonModule,
     Header   // ✅ ADD HERE
   ],
   templateUrl: './layout.html',
@@ -18,19 +20,19 @@ import { HostListener } from '@angular/core';
 export class Layout {
   isCollapsed = false;
   isHide = false;
-
-  toggleSidebar() {
-    if(window.innerWidth >= 1024){
-      this.isCollapsed = !this.isCollapsed;
-    }
-    else{
-      this.isHide = !this.isHide;
-    }
+toggleSidebar() {
+  if (window.innerWidth >= 1024) {
+    this.isCollapsed = !this.isCollapsed;
+  } else {
+    this.isHide = !this.isHide;   // 👉 controls drawer
   }
+}
   ngOnInit() {
   this.checkScreen();
 }
-
+closeDrawer() {
+  this.isHide = false;
+}
 @HostListener('window:resize')
 onResize() {
   this.checkScreen();
